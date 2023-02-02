@@ -1,46 +1,47 @@
 import fs from "fs";
 import path from "path";
-import unlike from "fs";
-// fs.readFile(
-//   path.join(__dirname, "my_files", "start.txt"),
-//   "utf-8",
-//   (error, data): void => {
-//     if (error) {
-//       console.log("failed to read file");
-//     } else {
-//       console.log("This is the data", data);
-//     }
-//   }
-// );
+import unlink from "fs";
 
-// const restLetter = "i love computer programming";
+fs.readFile(
+  path.join(__dirname, "my_files", "start.txt"),
+  "utf-8",
+  (error, data): void => {
+    if (error) {
+      console.log("failed to read file");
+    } else {
+      console.log("This is the data", data);
+    }
+  }
+);
 
-// fs.writeFile(
-//   path.join(__dirname, "my_files", "node.txt"),
-//   restLetter,
-//   (error) => {
-//     if (error) {
-//       console.log("An error occured" + error);
-//     } else {
-//       console.log("Wriiten");
-//     }
+const restLetter = "i love computer programming";
+
+fs.writeFile(
+  path.join(__dirname, "my_files", "node.txt"),
+  restLetter,
+  (error) => {
+    if (error) {
+      console.log("An error occured" + error);
+    } else {
+      console.log("Wriiten");
+    }
 
 // //Append a file which means write to an existing file
-//     const rentUpdate =
-//       "\nif programming was the last thing on earth i will give my all to knowing it\nbecause of the great potenials in it.";
-//     fs.appendFile(
-//       path.join(__dirname, "my_files", "judith.txt"),
-//       rentUpdate,
-//       (error) => {
-//         if (error) {
-//           console.log("failed");
-//         } else {
-//           console.log("updated");
-//         }
-//       }
-//     );
-//   }
-// );
+    const rentUpdate =
+      "\nif programming was the last thing on earth i will give my all to knowing it\nbecause of the great potenials in it.";
+    fs.appendFile(
+      path.join(__dirname, "my_files", "judith.txt"),
+      rentUpdate,
+      (error) => {
+        if (error) {
+          console.log("failed");
+        } else {
+          console.log("updated");
+        }
+      }
+    );
+  }
+);
 
 //creating a new folder
 fs.mkdir("./profilfile", (error): void => {
@@ -62,7 +63,7 @@ if (!fs.existsSync("./set06 file")) {
   });
 }
 
-// //deleting a folder
+// //deleting a files
 
 fs.unlink("./my_files/judith.txt", (error) => {
   if (error) {
